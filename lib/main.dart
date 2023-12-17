@@ -15,15 +15,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       routes: {
-        '/Anasayfa': (context) =>Anasayfa (), // AnasayfaScreen, anasayfanızın widget sınıfıdır.
-
+        '/Anasayfa': (context) =>
+            const Anasayfa(), // AnasayfaScreen, anasayfanızın widget sınıfıdır.
       },
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.lightTheme, // Açık tema
       darkTheme: AppTheme.darkTheme, // Koyu tema
       themeMode: ThemeMode.system,
-
 
       home: const LoginScreen(),
     );

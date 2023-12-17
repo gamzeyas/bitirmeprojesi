@@ -1,3 +1,5 @@
+// import 'package:bitirme_projesi/widgets/drawer_widget.dart';
+import 'package:bitirme_projesi/pages/Anasayfa.dart';
 import 'package:flutter/material.dart';
 
 // import 'package:bitirme_projesi/data/app_theme.dart';
@@ -12,8 +14,8 @@ class LoginScreen extends StatelessWidget {
       backgroundColor: theme.primaryColor,
       body: SafeArea(
         child: Container(
-          padding: EdgeInsets.symmetric(horizontal: 24.0),
-          decoration: BoxDecoration(
+          padding: const EdgeInsets.symmetric(horizontal: 24.0),
+          decoration: const BoxDecoration(
             image: DecorationImage(
               image: AssetImage('images/tobeto_arka_plan.png'),
               fit: BoxFit.fill,
@@ -22,67 +24,70 @@ class LoginScreen extends StatelessWidget {
           child: Center(
             child: SingleChildScrollView(
               child: Card(
+                color: Theme.of(context).colorScheme.background,
                 elevation: 5.0,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20.0),
                 ),
                 child: Padding(
-                  padding: EdgeInsets.all(16.0),
+                  padding: const EdgeInsets.all(16.0),
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: <Widget>[
                       // Logo
                       Image.asset('images/tobeto_logo.png',
                           width: 300.0, height: 150.0),
-                      SizedBox(height: 20.0),
+                      const SizedBox(height: 20.0),
                       // Kullanıcı Kodu TextField
-                      TextField(
+                      const TextField(
                         decoration: InputDecoration(
                           hintText: 'Kullanıcı Kodu',
                           prefixIcon: Icon(Icons.person_2_outlined),
                           border: OutlineInputBorder(),
                         ),
                       ),
-                      SizedBox(height: 8.0),
+                      const SizedBox(height: 8.0),
                       // Parola TextField
                       TextField(
                         obscureText: true,
                         decoration: InputDecoration(
                           labelText: 'Parola',
-                          prefixIcon: Icon(Icons.lock_outline),
+                          prefixIcon: const Icon(Icons.lock_outline),
                           // Parola alanına göz ikonu ekleniyor
                           suffixIcon: IconButton(
-                            icon: Icon(Icons.visibility_off_outlined),
+                            icon: const Icon(Icons.visibility_off_outlined),
                             onPressed: () {
                               // Göz ikonuna basıldığında yapılacak işlem
                             },
                           ),
-                          border: OutlineInputBorder(),
+                          border: const OutlineInputBorder(),
                         ),
                       ),
-                      SizedBox(height: 24.0),
+                      const SizedBox(height: 24.0),
                       // Giriş Yap Butonu
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10)),
-                          minimumSize: Size(
+                          minimumSize: const Size(
                               double.infinity, 36), // Butonun minimum boyutu
                         ),
-                        child: Text('GİRİŞ YAP'),
+                        child: const Text('GİRİŞ YAP'),
                         onPressed: () {
-                          Navigator.pushReplacementNamed(context, '/Anasayfa');
-                          // Butona tıklandığında yapılacak işlemler
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const Anasayfa()));
                         },
                       ),
                       TextButton(
-                        child: Text('Parolamı Unuttum'),
                         style: TextButton.styleFrom(
                           foregroundColor: Colors.blue,
                         ),
                         onPressed: () {
                           // Parolamı Unuttum'a tıklandığında yapılacak işlemler
                         },
+                        child: const Text('Parolamı Unuttum'),
                       ),
                     ],
                   ),
