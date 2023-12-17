@@ -70,6 +70,7 @@ class LoginScreen extends StatelessWidget {
                         ),
                         child: Text('GİRİŞ YAP'),
                         onPressed: () {
+                          Navigator.pushReplacementNamed(context, '/Anasayfa');
                           // Butona tıklandığında yapılacak işlemler
                         },
                       ),
