@@ -7,10 +7,8 @@
  - Seckin Ersoy
  - Ramazan Aydınlı
  
-#Tobeto mobil uygulama gelistirme sinifinin mezuniyet ödevidir. 
-1B sınıfı olarak gruplar halinde ögrenme programımız olan tobeto'nun uygulamasını geliştiriyoruz.
-Benim grup arkadaşlarım @aydnlramazan ve @seckinersoy. 
-İlk görev olan gırıs ekranı tasarımını tamamladık.
+Tobeto mobil uygulama gelistirme sinifinin mezuniyet ödevidir. 1B sınıfı olarak gruplar halinde ögrenme programımız olan tobeto'nun uygulamasını geliştiriyoruz.
+
 
 
 - Yeni bir flutter projesi oluşturduk.✓
