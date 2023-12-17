@@ -3,9 +3,9 @@
 ## Takım İsmi
  pair1
 #### Takım Elemanları
- - Gamze Yas
- - Seckin Ersoy
- - Ramazan Aydınlı
+ - Gamze Yas @gamzeyas
+ - Seckin Ersoy @seckinersoy
+ - Ramazan Aydınlı @aydnlramazan
  
 Tobeto mobil uygulama gelistirme sinifinin mezuniyet ödevidir. 1B sınıfı olarak gruplar halinde ögrenme programımız olan tobeto'nun uygulamasını geliştiriyoruz.
 
