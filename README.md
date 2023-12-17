@@ -13,8 +13,7 @@ Benim grup arkadaşlarım @aydnlramazan ve @seckinersoy.
 ✓ Projemizde ilk olarak açılacak sayfayı (login) tasarladık.
 
 
-
-src=https://cdn.discordapp.com/attachments/1165327194155917472/1185997365384073337/screenshot.png?ex=6591a51e&is=657f301e&hm=3977bbf5a055afb20d62e95b3aab039060dc5ad90f157a442ef4bb72c42fa7d1&
+![tobeto (500 × 300 piksel)](https://cdn.discordapp.com/attachments/1165327194155917472/1185997365384073337/screenshot.png?ex=6591a51e&is=657f301e&hm=3977bbf5a055afb20d62e95b3aab039060dc5ad90f157a442ef4bb72c42fa7d1&)
 
 
 ![Tobeto giriş ekranı](images/tobeto_logo.png)
