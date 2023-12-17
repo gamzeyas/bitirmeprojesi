@@ -17,9 +17,11 @@ class AppTheme {
           foregroundColor: Colors.white,
         ),
       ),
-      textTheme: TextTheme(
-        headlineMedium: TextStyle(color: Colors.grey, fontWeight: FontWeight.bold),
-        labelLarge: TextStyle(color: Colors.white, fontSize: 18.0, fontWeight: FontWeight.bold),
+      textTheme: const TextTheme(
+        headlineMedium:
+            TextStyle(color: Colors.grey, fontWeight: FontWeight.bold),
+        labelLarge: TextStyle(
+            color: Colors.white, fontSize: 18.0, fontWeight: FontWeight.bold),
         titleMedium: TextStyle(color: Colors.grey),
       ),
       inputDecorationTheme: InputDecorationTheme(
@@ -47,15 +49,16 @@ class AppTheme {
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
-          backgroundColor: Colors.purple.shade800
-          ,
+          backgroundColor: Colors.purple.shade800,
           foregroundColor: Colors.grey.shade50,
         ),
       ),
-      textTheme: TextTheme(
-        headlineMedium: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-        labelLarge: TextStyle(color: Colors.black, fontSize: 18.0, fontWeight: FontWeight.bold),
-        titleMedium: TextStyle(color: Colors.white),
+      textTheme: const TextTheme(
+        headlineMedium:
+            TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+        labelLarge: TextStyle(
+            color: Colors.black, fontSize: 18.0, fontWeight: FontWeight.bold),
+        titleMedium: TextStyle(color: Colors.black),
       ),
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
