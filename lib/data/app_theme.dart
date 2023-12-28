@@ -6,8 +6,8 @@ class AppTheme {
     // Mevcut tema kodunuz (Açık Tema olarak kullanılacak)
     return ThemeData(
       colorScheme: ColorScheme.light(
-        primary: Colors.white,
-        onPrimary: Colors.grey,
+        primary: Colors.purple,
+        onPrimary: Colors.white,
         secondary: Colors.purple.shade800,
         onSecondary: Colors.blueAccent,
       ),
@@ -26,7 +26,7 @@ class AppTheme {
       ),
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
-        fillColor: Colors.white,
+        fillColor: Colors.purple,
         contentPadding: EdgeInsets.symmetric(vertical: 15.0, horizontal: 10.0),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8.0),
