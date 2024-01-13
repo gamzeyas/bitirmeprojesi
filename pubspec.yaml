@@ -55,15 +55,15 @@ flutter:
   fonts:
     - family: Tinos
       fonts:
-        - asset: fonts/Tinos-Bold.ttf
-        - asset: fonts/Tinos-Regular.ttf
+        - asset: assets/fonts/Tinos-Bold.ttf
+        - asset: assets/fonts/Tinos-Regular.ttf
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - images/tobeto_logo.png
-    - images/tobeto_arka_plan.png
-    - images/istanbul_kodluyor.png
-    - images/tobetolight.png
+    - assets/images/tobeto_logo.png
+    - assets/images/tobeto_arka_plan.png
+    - assets/images/istanbul_kodluyor.png
+    - assets/images/tobetolight.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

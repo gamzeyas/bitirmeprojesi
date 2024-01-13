@@ -1,5 +1,5 @@
-import 'package:bitirme_projesi/login_screen.dart';
-import 'package:bitirme_projesi/pages/Anasayfa.dart';
+import 'package:bitirme_projesi/screens/home_screen.dart';
+import 'package:bitirme_projesi/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:bitirme_projesi/data/app_theme.dart';
 
