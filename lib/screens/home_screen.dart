@@ -1,16 +1,20 @@
+
+import 'package:bitirme_projesi/widgets/home_drawer_widget.dart';
 import 'package:flutter/material.dart';
 
-class Anasayfa extends StatefulWidget {
-  const Anasayfa({super.key});
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
 
   @override
-  State<Anasayfa> createState() => _AnasayfaState();
+  State<HomePage> createState() => _HomePageState();
 }
 
-class _AnasayfaState extends State<Anasayfa> {
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: const DrawerWidget(),
+
       appBar: AppBar(
         title: const Row(
           children: [
@@ -18,7 +22,11 @@ class _AnasayfaState extends State<Anasayfa> {
               width: 150,
               height: 150,
               child: Image(
-                image: AssetImage('images/tobeto_logo.png'),
+
+                image: AssetImage(
+                  'assets/images/tobeto_logo.png',
+                ),
+
               ),
             ),
           ],
@@ -100,7 +108,9 @@ class _AnasayfaState extends State<Anasayfa> {
                             tabs: [
                               Tab(
                                 child: Text(
+
                                   'Başvurularım',
+
                                   style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                   ),
@@ -108,19 +118,28 @@ class _AnasayfaState extends State<Anasayfa> {
                               ),
                               Tab(
                                 child: Text(
+
+
                                   'Eğitimlerim',
+
                                   style: TextStyle(fontWeight: FontWeight.bold),
                                 ),
                               ),
                               Tab(
                                 child: Text(
+ 
+
                                   'Duyuru ve Haberlerim',
+
                                   style: TextStyle(fontWeight: FontWeight.bold),
                                 ),
                               ),
                               Tab(
                                 child: Text(
+
+ 
                                   'Anketlerim',
+
                                   style: TextStyle(fontWeight: FontWeight.bold),
                                 ),
                               ),
@@ -284,7 +303,9 @@ class _AnasayfaState extends State<Anasayfa> {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-                          Center(
+
+                          const Center(
+
                             child: Text(
                               'Profilini Oluştur',
                               style: TextStyle(
@@ -295,7 +316,8 @@ class _AnasayfaState extends State<Anasayfa> {
                           ),
                           ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                              minimumSize: Size(360, 50),
+                     minimumSize: const Size(360, 50),
+
                             ),
                             onPressed: () {},
                             child: const Text('Başla'),
@@ -331,7 +353,9 @@ class _AnasayfaState extends State<Anasayfa> {
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
-                            Center(
+
+                            const Center(
+
                               child: Text(
                                 'Kendini Değerlendir',
                                 style: TextStyle(
@@ -342,7 +366,9 @@ class _AnasayfaState extends State<Anasayfa> {
                             ),
                             ElevatedButton(
                               style: ElevatedButton.styleFrom(
-                                minimumSize: Size(360, 50),
+
+                                minimumSize: const Size(360, 50),
+
                               ),
                               onPressed: () {},
                               child: const Text('Başla'),
@@ -377,7 +403,9 @@ class _AnasayfaState extends State<Anasayfa> {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-                          Center(
+
+                          const Center(
+
                             child: Text(
                               'Öğrenmeye Başla',
                               style: TextStyle(
@@ -388,7 +416,8 @@ class _AnasayfaState extends State<Anasayfa> {
                           ),
                           ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                              minimumSize: Size(360, 50),
+              minimumSize: const Size(360, 50),
+
                             ),
                             onPressed: () {},
                             child: const Text('Başla'),

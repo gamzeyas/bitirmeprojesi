@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       routes: {
         '/Anasayfa': (context) =>
-            const Anasayfa(), // AnasayfaScreen, anasayfanızın widget sınıfıdır.
+            const HomePage(), // AnasayfaScreen, anasayfanızın widget sınıfıdır.
       },
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
