@@ -1,3 +1,4 @@
+
 import 'package:bitirme_projesi/widgets/home_drawer_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -13,6 +14,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: const DrawerWidget(),
+
       appBar: AppBar(
         title: const Row(
           children: [
@@ -20,9 +22,11 @@ class _HomePageState extends State<HomePage> {
               width: 150,
               height: 150,
               child: Image(
+
                 image: AssetImage(
                   'assets/images/tobeto_logo.png',
                 ),
+
               ),
             ),
           ],
@@ -104,7 +108,9 @@ class _HomePageState extends State<HomePage> {
                             tabs: [
                               Tab(
                                 child: Text(
-                                  'Başvurular',
+
+                                  'Başvurularım',
+
                                   style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                   ),
@@ -112,19 +118,28 @@ class _HomePageState extends State<HomePage> {
                               ),
                               Tab(
                                 child: Text(
-                                  'Eğitimler',
+
+
+                                  'Eğitimlerim',
+
                                   style: TextStyle(fontWeight: FontWeight.bold),
                                 ),
                               ),
                               Tab(
                                 child: Text(
-                                  'Duyuru ve Haberler',
+ 
+
+                                  'Duyuru ve Haberlerim',
+
                                   style: TextStyle(fontWeight: FontWeight.bold),
                                 ),
                               ),
                               Tab(
                                 child: Text(
-                                  'Anketler',
+
+ 
+                                  'Anketlerim',
+
                                   style: TextStyle(fontWeight: FontWeight.bold),
                                 ),
                               ),
@@ -288,7 +303,9 @@ class _HomePageState extends State<HomePage> {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
+
                           const Center(
+
                             child: Text(
                               'Profilini Oluştur',
                               style: TextStyle(
@@ -299,7 +316,8 @@ class _HomePageState extends State<HomePage> {
                           ),
                           ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                              minimumSize: const Size(360, 50),
+                     minimumSize: const Size(360, 50),
+
                             ),
                             onPressed: () {},
                             child: const Text('Başla'),
@@ -335,7 +353,9 @@ class _HomePageState extends State<HomePage> {
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
+
                             const Center(
+
                               child: Text(
                                 'Kendini Değerlendir',
                                 style: TextStyle(
@@ -346,7 +366,9 @@ class _HomePageState extends State<HomePage> {
                             ),
                             ElevatedButton(
                               style: ElevatedButton.styleFrom(
+
                                 minimumSize: const Size(360, 50),
+
                               ),
                               onPressed: () {},
                               child: const Text('Başla'),
@@ -381,7 +403,9 @@ class _HomePageState extends State<HomePage> {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
+
                           const Center(
+
                             child: Text(
                               'Öğrenmeye Başla',
                               style: TextStyle(
@@ -392,7 +416,8 @@ class _HomePageState extends State<HomePage> {
                           ),
                           ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                              minimumSize: const Size(360, 50),
+              minimumSize: const Size(360, 50),
+
                             ),
                             onPressed: () {},
                             child: const Text('Başla'),
