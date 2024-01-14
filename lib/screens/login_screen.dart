@@ -17,7 +17,7 @@ class LoginScreen extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 24.0),
           decoration: const BoxDecoration(
             image: DecorationImage(
-              image: AssetImage('images/tobeto_arka_plan.png'),
+              image: AssetImage('assets/images/tobeto_arka_plan.png'),
               fit: BoxFit.fill,
             ),
           ),
@@ -35,7 +35,7 @@ class LoginScreen extends StatelessWidget {
                     mainAxisSize: MainAxisSize.min,
                     children: <Widget>[
                       // Logo
-                      Image.asset('images/tobeto_logo.png',
+                      Image.asset('assets/images/tobeto_logo.png',
                           width: 300.0, height: 150.0),
                       const SizedBox(height: 20.0),
                       // Kullanıcı Kodu TextField
@@ -74,6 +74,7 @@ class LoginScreen extends StatelessWidget {
                         ),
                         child: const Text('GİRİŞ YAP'),
                         onPressed: () {
+
                           Navigator.pushReplacement(
                             //pushReplacement geri butonu koymadan diğer sayfaya geçer!
                             context,
@@ -81,6 +82,7 @@ class LoginScreen extends StatelessWidget {
                               builder: (context) => const HomeScreen(),
                             ),
                           );
+
                         },
                       ),
                       TextButton(

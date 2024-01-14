@@ -1,3 +1,4 @@
+
 import 'package:bitirme_projesi/widgets/home_drawer_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -10,16 +11,20 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
+
   @override
   Widget build(BuildContext context) {
     double ScreenWidth = MediaQuery.of(context).size.width;
     double ScreenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
+
       key: _scaffoldKey,
+
       appBar: AppBar(
         title: Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
+
             GestureDetector(
               onTap: () {
                 Navigator.pushReplacement(
@@ -34,6 +39,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 "https://tobeto.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftobeto-logo.409772fc.png&w=384&q=75",
                 width: ScreenWidth / 2,
                 height: ScreenHeight / 3,
+
               ),
             ),
           ],
@@ -116,7 +122,9 @@ class _HomeScreenState extends State<HomeScreen> {
                             tabs: [
                               Tab(
                                 child: Text(
+
                                   'Başvurularım',
+
                                   style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                   ),
@@ -124,19 +132,28 @@ class _HomeScreenState extends State<HomeScreen> {
                               ),
                               Tab(
                                 child: Text(
+
+
                                   'Eğitimlerim',
+
                                   style: TextStyle(fontWeight: FontWeight.bold),
                                 ),
                               ),
                               Tab(
                                 child: Text(
+ 
+
                                   'Duyuru ve Haberlerim',
+
                                   style: TextStyle(fontWeight: FontWeight.bold),
                                 ),
                               ),
                               Tab(
                                 child: Text(
+
+ 
                                   'Anketlerim',
+
                                   style: TextStyle(fontWeight: FontWeight.bold),
                                 ),
                               ),
@@ -300,7 +317,9 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
+
                           const Center(
+
                             child: Text(
                               'Profilini Oluştur',
                               style: TextStyle(
@@ -311,7 +330,9 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                           ElevatedButton(
                             style: ElevatedButton.styleFrom(
+
                               minimumSize: const Size(360, 50),
+
                             ),
                             onPressed: () {},
                             child: const Text('Başla'),
@@ -347,7 +368,9 @@ class _HomeScreenState extends State<HomeScreen> {
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
+
                             const Center(
+
                               child: Text(
                                 'Kendini Değerlendir',
                                 style: TextStyle(
@@ -358,7 +381,9 @@ class _HomeScreenState extends State<HomeScreen> {
                             ),
                             ElevatedButton(
                               style: ElevatedButton.styleFrom(
+
                                 minimumSize: const Size(360, 50),
+
                               ),
                               onPressed: () {},
                               child: const Text('Başla'),
@@ -393,7 +418,9 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
+
                           const Center(
+
                             child: Text(
                               'Öğrenmeye Başla',
                               style: TextStyle(
@@ -404,7 +431,9 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                           ElevatedButton(
                             style: ElevatedButton.styleFrom(
+
                               minimumSize: const Size(360, 50),
+
                             ),
                             onPressed: () {},
                             child: const Text('Başla'),
