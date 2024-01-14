@@ -1,14 +1,15 @@
-
-import 'package:bitirme_projesi/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 
-class DrawerWidget extends StatelessWidget {
-  const DrawerWidget({super.key});
+
+class HomeDrawerWidget extends StatelessWidget {
+  const HomeDrawerWidget({Key? key}) : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {
     return Drawer(
       child: ListView(
+
         children: [
           DrawerHeader(
             child: Row(
@@ -94,6 +95,7 @@ class DrawerWidget extends StatelessWidget {
               Text('2022 Tobeto'),
             ],
           ))
+
         ],
       ),
     );
