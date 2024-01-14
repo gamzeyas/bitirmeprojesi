@@ -74,10 +74,13 @@ class LoginScreen extends StatelessWidget {
                         ),
                         child: const Text('GİRİŞ YAP'),
                         onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const Anasayfa()));
+                          Navigator.pushReplacement(
+                            //pushReplacement geri butonu koymadan diğer sayfaya geçer!
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const HomeScreen(),
+                            ),
+                          );
                         },
                       ),
                       TextButton(

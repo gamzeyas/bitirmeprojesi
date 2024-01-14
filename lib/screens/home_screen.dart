@@ -1,29 +1,45 @@
+import 'package:bitirme_projesi/widgets/home_drawer_widget.dart';
 import 'package:flutter/material.dart';
 
-class Anasayfa extends StatefulWidget {
-  const Anasayfa({super.key});
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
 
   @override
-  State<Anasayfa> createState() => _AnasayfaState();
+  State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _AnasayfaState extends State<Anasayfa> {
+class _HomeScreenState extends State<HomeScreen> {
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
+    double ScreenWidth = MediaQuery.of(context).size.width;
+    double ScreenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
+      key: _scaffoldKey,
       appBar: AppBar(
-        title: const Row(
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            SizedBox(
-              width: 150,
-              height: 150,
-              child: Image(
-                image: AssetImage('images/tobeto_logo.png'),
+            GestureDetector(
+              onTap: () {
+                Navigator.pushReplacement(
+                  //pushReplacement geri butonu koymadan diğer sayfaya geçer!
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const HomeScreen(),
+                  ),
+                );
+              },
+              child: Image.network(
+                "https://tobeto.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftobeto-logo.409772fc.png&w=384&q=75",
+                width: ScreenWidth / 2,
+                height: ScreenHeight / 3,
               ),
             ),
           ],
         ),
       ),
+      drawer: const HomeDrawerWidget(),
       body: SingleChildScrollView(
         child: Center(
           child: Column(
@@ -284,7 +300,7 @@ class _AnasayfaState extends State<Anasayfa> {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-                          Center(
+                          const Center(
                             child: Text(
                               'Profilini Oluştur',
                               style: TextStyle(
@@ -295,7 +311,7 @@ class _AnasayfaState extends State<Anasayfa> {
                           ),
                           ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                              minimumSize: Size(360, 50),
+                              minimumSize: const Size(360, 50),
                             ),
                             onPressed: () {},
                             child: const Text('Başla'),
@@ -331,7 +347,7 @@ class _AnasayfaState extends State<Anasayfa> {
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
-                            Center(
+                            const Center(
                               child: Text(
                                 'Kendini Değerlendir',
                                 style: TextStyle(
@@ -342,7 +358,7 @@ class _AnasayfaState extends State<Anasayfa> {
                             ),
                             ElevatedButton(
                               style: ElevatedButton.styleFrom(
-                                minimumSize: Size(360, 50),
+                                minimumSize: const Size(360, 50),
                               ),
                               onPressed: () {},
                               child: const Text('Başla'),
@@ -377,7 +393,7 @@ class _AnasayfaState extends State<Anasayfa> {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-                          Center(
+                          const Center(
                             child: Text(
                               'Öğrenmeye Başla',
                               style: TextStyle(
@@ -388,7 +404,7 @@ class _AnasayfaState extends State<Anasayfa> {
                           ),
                           ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                              minimumSize: Size(360, 50),
+                              minimumSize: const Size(360, 50),
                             ),
                             onPressed: () {},
                             child: const Text('Başla'),
