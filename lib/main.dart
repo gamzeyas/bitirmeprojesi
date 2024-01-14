@@ -1,5 +1,5 @@
-import 'package:bitirme_projesi/login_screen.dart';
-import 'package:bitirme_projesi/pages/Anasayfa.dart';
+import 'package:bitirme_projesi/screens/home_screen.dart';
+import 'package:bitirme_projesi/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:bitirme_projesi/data/app_theme.dart';
 
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       routes: {
         '/Anasayfa': (context) =>
-            const Anasayfa(), // AnasayfaScreen, anasayfanızın widget sınıfıdır.
+            const HomePage(), // AnasayfaScreen, anasayfanızın widget sınıfıdır.
       },
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
