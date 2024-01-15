@@ -1,4 +1,3 @@
-
 import 'package:bitirme_projesi/widgets/home_drawer_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -17,14 +16,11 @@ class _HomeScreenState extends State<HomeScreen> {
     double ScreenWidth = MediaQuery.of(context).size.width;
     double ScreenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
-
       key: _scaffoldKey,
-
       appBar: AppBar(
         title: Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-
             GestureDetector(
               onTap: () {
                 Navigator.pushReplacement(
@@ -39,7 +35,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 "https://tobeto.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftobeto-logo.409772fc.png&w=384&q=75",
                 width: ScreenWidth / 2,
                 height: ScreenHeight / 3,
-
               ),
             ),
           ],
@@ -113,47 +108,44 @@ class _HomeScreenState extends State<HomeScreen> {
                             fontSize: 20),
                       ),
                     ),
+                    const SizedBox(
+                      height: 16,
+                    ),
                     const Column(
                       children: [
                         DefaultTabController(
                           length: 4,
                           child: TabBar(
-                            isScrollable: false,
+                            isScrollable: true,
+                            tabAlignment: TabAlignment.start,
                             tabs: [
-                              Tab(
+                              SizedBox(
+                                width: 120,
                                 child: Text(
-
                                   'Başvurularım',
-
                                   style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
                               ),
-                              Tab(
+                              SizedBox(
+                                width: 120,
                                 child: Text(
-
-
                                   'Eğitimlerim',
-
                                   style: TextStyle(fontWeight: FontWeight.bold),
                                 ),
                               ),
-                              Tab(
+                              SizedBox(
+                                width: 120,
                                 child: Text(
- 
-
                                   'Duyuru ve Haberlerim',
-
                                   style: TextStyle(fontWeight: FontWeight.bold),
                                 ),
                               ),
-                              Tab(
+                              SizedBox(
+                                width: 120,
                                 child: Text(
-
- 
                                   'Anketlerim',
-
                                   style: TextStyle(fontWeight: FontWeight.bold),
                                 ),
                               ),
@@ -233,65 +225,103 @@ class _HomeScreenState extends State<HomeScreen> {
                   ],
                 ),
               ),
-              // Card(
-              //   child: Column(
-              //     crossAxisAlignment: CrossAxisAlignment.start,
-              //     children: [
-              //       const Text('Sınavlarım'),
-              //       Container(
-              //         width: 400,
-              //         height: 180,
-              //         decoration: BoxDecoration(
-              //           borderRadius: BorderRadius.circular(8),
-              //         ),
-              //         child: Column(
-              //           children: [
-              //             Container(
-              //               width: 120,
-              //               height: 100,
-              //               decoration: BoxDecoration(
-              //                   borderRadius: BorderRadius.circular(8)),
-              //               child: Row(
-              //                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              //                 children: [
-              //                   const Text(
-              //                       'Herkes için \nKodlama 1D \nDeğerlendirme \nSınavı'),
-              //                   Container(
-              //                     decoration: const BoxDecoration(
-              //                       gradient: LinearGradient(
-              //                         colors: [
-              //                           Colors.purple,
-              //                           Colors.deepPurple
-              //                         ],
-              //                         begin: Alignment.topLeft,
-              //                         end: Alignment.bottomRight,
-              //                       ),
-              //                     ),
-              //                     child: const Icon(Icons.done),
-              //                   )
-              //                 ],
-              //               ),
-              //             ),
-              //             const Text('Herkes İçin Kodlama - 1D'),
-              //             const Row(
-              //               children: [
-              //                 Icon(
-              //                   Icons.timer_outlined,
-              //                   color: Colors.purple,
-              //                 ),
-              //                 Text(
-              //                   '45 Dakika',
-              //                   style: TextStyle(
-              //                       fontWeight: FontWeight.bold, fontSize: 18),
-              //                 ),
-              //               ],
-              //             )
-              //           ],
-              //         ),
-              //       ),
-              //     ],
-              //   ),
-              // ),
+              SizedBox(
+                width: double.maxFinite,
+                child: Card(
+                  surfaceTintColor: Colors.white,
+                  elevation: 20,
+                  child: Padding(
+                    padding: const EdgeInsets.all(20.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text(
+                          'Sınavlarım',
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20),
+                          textAlign: TextAlign.start,
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 10),
+                          child: Card(
+                            surfaceTintColor: Colors.white,
+                            elevation: 10,
+                            child: SizedBox(
+                              width: 200,
+                              child: InkWell(
+                                onTap: () {},
+                                child: const Padding(
+                                  padding: EdgeInsets.all(15),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Row(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Expanded(
+                                            child: Padding(
+                                              padding: EdgeInsets.symmetric(
+                                                  vertical: 5),
+                                              child: Text(
+                                                'Herkes için Kodlama 1D Değerlendirme Sınavı',
+                                                style: TextStyle(
+                                                    color: Colors.black,
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 17),
+                                              ),
+                                            ),
+                                          ),
+                                          Icon(
+                                            Icons.check_box,
+                                            color: Colors.green,
+                                            size: 30,
+                                          ),
+                                        ],
+                                      ),
+                                      Padding(
+                                        padding:
+                                            EdgeInsets.symmetric(vertical: 3),
+                                        child: Text(
+                                          'Herkes için Kodlama 1D',
+                                          style: TextStyle(
+                                              color: Colors.black,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                      ),
+                                      Row(
+                                        children: [
+                                          Icon(
+                                            Icons.alarm_outlined,
+                                          ),
+                                          Padding(
+                                            padding: EdgeInsets.symmetric(
+                                                vertical: 8),
+                                            child: Text(
+                                              '45 Dakika',
+                                              style: TextStyle(
+                                                  color: Colors.black,
+                                                  fontWeight: FontWeight.bold,
+                                                  fontSize: 17),
+                                            ),
+                                          )
+                                        ],
+                                      )
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
               Column(
                 children: [
                   Padding(
@@ -317,9 +347,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-
                           const Center(
-
                             child: Text(
                               'Profilini Oluştur',
                               style: TextStyle(
@@ -330,9 +358,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                           ElevatedButton(
                             style: ElevatedButton.styleFrom(
-
                               minimumSize: const Size(360, 50),
-
                             ),
                             onPressed: () {},
                             child: const Text('Başla'),
@@ -368,9 +394,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
-
                             const Center(
-
                               child: Text(
                                 'Kendini Değerlendir',
                                 style: TextStyle(
@@ -381,9 +405,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             ),
                             ElevatedButton(
                               style: ElevatedButton.styleFrom(
-
                                 minimumSize: const Size(360, 50),
-
                               ),
                               onPressed: () {},
                               child: const Text('Başla'),
@@ -418,9 +440,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-
                           const Center(
-
                             child: Text(
                               'Öğrenmeye Başla',
                               style: TextStyle(
@@ -431,9 +451,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                           ElevatedButton(
                             style: ElevatedButton.styleFrom(
-
                               minimumSize: const Size(360, 50),
-
                             ),
                             onPressed: () {},
                             child: const Text('Başla'),

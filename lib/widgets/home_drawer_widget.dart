@@ -1,15 +1,14 @@
+import 'package:bitirme_projesi/screens/catalogue_screen.dart';
+import 'package:bitirme_projesi/screens/home_screen.dart';
 import 'package:flutter/material.dart';
-
 
 class HomeDrawerWidget extends StatelessWidget {
   const HomeDrawerWidget({Key? key}) : super(key: key);
-
 
   @override
   Widget build(BuildContext context) {
     return Drawer(
       child: ListView(
-
         children: [
           DrawerHeader(
             child: Row(
@@ -34,7 +33,7 @@ class HomeDrawerWidget extends StatelessWidget {
             title: const Text('Anasayfa'),
             onTap: () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const HomePage()));
+                  MaterialPageRoute(builder: (context) => const HomeScreen()));
             },
           ),
           const ListTile(
@@ -45,9 +44,15 @@ class HomeDrawerWidget extends StatelessWidget {
             // leading: Icon(Icons.person),
             title: Text('Profilim'),
           ),
-          const ListTile(
+          ListTile(
             // leading: Icon(Icons.category),
-            title: Text('Katalog'),
+            title: const Text('Katalog'),
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const CatalogueScreen()));
+            },
           ),
           const ListTile(
             // leading: Icon(Icons.calendar_month),
@@ -95,7 +100,6 @@ class HomeDrawerWidget extends StatelessWidget {
               Text('2022 Tobeto'),
             ],
           ))
-
         ],
       ),
     );
