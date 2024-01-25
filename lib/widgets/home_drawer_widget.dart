@@ -1,6 +1,7 @@
+
+import 'package:bitirme_projesi/screens/catalogue_screen.dart';
 import 'package:bitirme_projesi/screens/home_screen.dart';
-import 'package:bitirme_projesi/screens/profile_screen.dart';
-import 'package:bitirme_projesi/screens/review_screen.dart';
+
 import 'package:flutter/material.dart';
 
 class HomeDrawerWidget extends StatelessWidget {
@@ -33,12 +34,14 @@ class HomeDrawerWidget extends StatelessWidget {
             // leading: Icon(Icons.home),
             title: const Text('Anasayfa'),
             onTap: () {
+
               Navigator.push(
                 context,
                 MaterialPageRoute(
                   builder: (context) => const HomeScreen(),
                 ),
               );
+
             },
           ),
           ListTile(
@@ -65,9 +68,15 @@ class HomeDrawerWidget extends StatelessWidget {
               );
             },
           ),
-          const ListTile(
+          ListTile(
             // leading: Icon(Icons.category),
-            title: Text('Katalog'),
+            title: const Text('Katalog'),
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const CatalogueScreen()));
+            },
           ),
           const ListTile(
             // leading: Icon(Icons.calendar_month),
