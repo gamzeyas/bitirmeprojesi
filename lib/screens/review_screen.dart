@@ -1,5 +1,6 @@
 import 'package:bitirme_projesi/screens/home_screen.dart';
 import 'package:bitirme_projesi/widgets/home_drawer_widget.dart';
+import 'package:bitirme_projesi/widgets/page_end.dart';
 import 'package:bitirme_projesi/widgets/review_info_box.dart';
 
 import 'package:bitirme_projesi/widgets/review_score_row_card.dart';
@@ -200,6 +201,8 @@ class ReviewScreen extends StatelessWidget {
                 )
               ],
             ),
+
+/*
             Container(
               width: 400,
               height: 100,
@@ -241,7 +244,8 @@ class ReviewScreen extends StatelessWidget {
                   )
                 ],
               ),
-            ),
+            ),*/
+            PageEnd(),
           ],
         ),
       ),
