@@ -1,4 +1,5 @@
 import 'package:bitirme_projesi/widgets/home_drawer_widget.dart';
+import 'package:bitirme_projesi/widgets/page_end.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -86,10 +87,11 @@ class _HomeScreenState extends State<HomeScreen> {
               Card(
                 child: Column(
                   children: [
-                    const Padding(
+                    Padding(
                       padding: EdgeInsets.only(top: 38, left: 78, right: 78),
-                      child: Image(
-                          image: AssetImage("images/istanbul_kodluyor.png")),
+                      child: Image.network(
+                          "https://tobeto.com/_next/static/media/ik-logo-dark.7938c0de.svg"),
+                      //burda bir hata alıyoruz image görünmüyor!
                     ),
                     const Text(
                       "Ücretsiz eğitimlerle, geleceğin\nmesleklerinde sen de yerini al.",
@@ -115,6 +117,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       children: [
                         DefaultTabController(
                           length: 4,
+
                           child: TabBar(
                             isScrollable: true,
                             tabAlignment: TabAlignment.start,
@@ -148,6 +151,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   'Anketlerim',
                                   style: TextStyle(fontWeight: FontWeight.bold),
                                 ),
+
                               ),
                             ],
                           ),
@@ -374,44 +378,48 @@ class _HomeScreenState extends State<HomeScreen> {
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Container(
-                        width: 400,
-                        height: 200,
-                        decoration: const BoxDecoration(
-                          borderRadius: BorderRadius.only(
-                            topRight: Radius.circular(16),
-                            bottomRight: Radius.circular(16),
-                            bottomLeft: Radius.circular(16),
-                          ),
-                          gradient: LinearGradient(
-                            colors: [
-                              Color.fromARGB(255, 15, 6, 151),
-                              Color.fromARGB(255, 124, 94, 235)
-                            ],
-                            begin: Alignment.topRight,
-                            end: Alignment.bottomLeft,
-                          ),
+                      width: 400,
+                      height: 200,
+                      decoration: const BoxDecoration(
+                        borderRadius: BorderRadius.only(
+                          topRight: Radius.circular(16),
+                          bottomRight: Radius.circular(16),
+                          bottomLeft: Radius.circular(16),
                         ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children: [
-                            const Center(
-                              child: Text(
-                                'Kendini Değerlendir',
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 24),
-                              ),
-                            ),
-                            ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                minimumSize: const Size(360, 50),
-                              ),
-                              onPressed: () {},
-                              child: const Text('Başla'),
-                            ),
+
+
+                        gradient: LinearGradient(
+                          colors: [
+                            Color.fromARGB(255, 15, 6, 151),
+                            Color.fromARGB(255, 124, 94, 235)
                           ],
-                        )),
+                          begin: Alignment.topRight,
+                          end: Alignment.bottomLeft,
+                        ),
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          const Center(
+                            child: Text(
+                              'Kendini Değerlendir',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 24),
+                            ),
+                          ),
+                          ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              minimumSize: const Size(360, 50),
+
+                            ),
+                            onPressed: () {},
+                            child: const Text('Başla'),
+                          ),
+                        ],
+                      ),
+                    ),
                   )
                 ],
               ),
@@ -462,48 +470,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ],
               ),
-              Container(
-                width: 400,
-                height: 100,
-                alignment: Alignment.topCenter,
-                decoration: const BoxDecoration(
-                    color: Color.fromARGB(255, 112, 3, 185)),
-                child: Column(
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        Image.asset(
-                          'images/tobetolight.png',
-                          width: 100,
-                          height: 50,
-                        ),
-                        ElevatedButton(
-                            style: ElevatedButton.styleFrom(
-                                backgroundColor: Colors.white),
-                            onPressed: () {},
-                            child: const Text(
-                              'Bize Ulaşın',
-                              style: TextStyle(color: Colors.black),
-                            ))
-                      ],
-                    ),
-                    const Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(
-                          Icons.copyright,
-                          color: Colors.white,
-                        ),
-                        Text(
-                          ' 2022 TOBETO',
-                          style: TextStyle(color: Colors.white),
-                        )
-                      ],
-                    )
-                  ],
-                ),
-              ),
+              PageEnd(),
             ],
           ),
         ),

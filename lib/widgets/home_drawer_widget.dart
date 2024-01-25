@@ -1,5 +1,7 @@
+
 import 'package:bitirme_projesi/screens/catalogue_screen.dart';
 import 'package:bitirme_projesi/screens/home_screen.dart';
+
 import 'package:flutter/material.dart';
 
 class HomeDrawerWidget extends StatelessWidget {
@@ -32,17 +34,39 @@ class HomeDrawerWidget extends StatelessWidget {
             // leading: Icon(Icons.home),
             title: const Text('Anasayfa'),
             onTap: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const HomeScreen()));
+
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const HomeScreen(),
+                ),
+              );
+
             },
           ),
-          const ListTile(
+          ListTile(
             // leading: Icon(Icons.reviews),
-            title: Text('Değerlendirmeler'),
+            title: const Text('Değerlendirmeler'),
+            onTap: () {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const ReviewScreen(),
+                ),
+              );
+            },
           ),
-          const ListTile(
+          ListTile(
             // leading: Icon(Icons.person),
-            title: Text('Profilim'),
+            title: const Text('Profilim'),
+            onTap: () {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const ProfileScreen(),
+                ),
+              );
+            },
           ),
           ListTile(
             // leading: Icon(Icons.category),
